@@ -6,7 +6,7 @@ const PrivateRoute = ({ component: Component, ...initialProps }) => {
     <Route
       {...initialProps}
       render={(props) => {
-        if (localStorage.getItem("authFriendsToken")) {
+        if (localStorage.getItem("react-bubbles-token")) {
           return <Component {...props} />;
         } else {
           return <Redirect to="/login" />;
